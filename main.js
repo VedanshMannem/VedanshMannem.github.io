@@ -1,8 +1,6 @@
-import './style.css'
+// import './style.css'
 import * as THREE from "three" 
-import cmImage from './cm.png';
-import liImage from './linkedin.png';
-import spaceImg from './space.jpg';
+
 
 // Setup
 
@@ -23,7 +21,7 @@ camera.position.setX(-3);
 renderer.render(scene, camera);
 
 // Background
-const spaceTexture = new THREE.TextureLoader().load(spaceImg);
+const spaceTexture = new THREE.TextureLoader().load('public/space.jpg');
 scene.background = spaceTexture;
 
 // Stars
@@ -101,12 +99,12 @@ window.addEventListener('mousemove', (event) => {
 
 
 // Add clickable box
-const cmtexture = new THREE.TextureLoader().load(cmImage);
+const cmtexture = new THREE.TextureLoader().load('public/cm.png');
 const cm = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: cmtexture }));
 cm.position.set(4.5, -2, 0);
 scene.add(cm);
 
-const litexture = new THREE.TextureLoader().load(liImage);
+const litexture = new THREE.TextureLoader().load('public/linkedin.png');
 const li = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: litexture }));
 li.position.set(-1, -2, 2);
 scene.add(li);
