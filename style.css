@@ -15,8 +15,8 @@ canvas {
 
 
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
-  --spacing: 350px;
+  --dark-bg: #3e3b3b;
+  --spacing: 250px;
 
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
@@ -35,6 +35,18 @@ main {
   
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+.headerP {
+  font-size: xx-large;
+}
+
+.pCrunch {
+  color: red;
+}
+
+.pMath {
+  color: blue
 }
 
 .links {
@@ -71,11 +83,14 @@ canvas {
 
   header {
     background: var(--dark-bg);
-    grid-column: 7 / span 5;
+    grid-column: 3 / span 8;
     font-size: 2.5rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
     overflow-x: hidden;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; 
   }
 
   section {
@@ -84,7 +99,17 @@ canvas {
     background: var(--dark-bg);
     font-size: 1.25rem;
     line-height: 1.5;
-    margin-bottom: var(--spacing);
+    margin-bottom: 150px;
+    overflow-x: hidden;
+  }
+
+  .right {
+    grid-column: 6 / 12;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 150px;
     overflow-x: hidden;
   }
 

@@ -22,7 +22,7 @@ renderer.render(scene, camera);
 
 // Background
 const spaceTexture = new THREE.TextureLoader().load('public/space.jpg');
-scene.background = spaceTexture;
+// scene.background = spaceTexture;
 
 // Stars
 function addStar() {
@@ -69,7 +69,7 @@ scene.add(pointLight, ambientLight);
 const trailGeometry = new THREE.SphereGeometry(0.1, 16, 16); // Smaller size and smoother geometry
 const trailMaterial = new THREE.MeshBasicMaterial({
   color: 0xffffff, // Subtle gray color
-  blending: THREE.AdditiveBlending, // Blending mode for a soft glow effect
+  // blending: THREE.AdditiveBlending, // Blending mode for a soft glow effect
 });
 const trailMeshes = []; // To hold trail meshes
 
@@ -100,14 +100,32 @@ window.addEventListener('mousemove', (event) => {
 
 // Add clickable box
 const cmtexture = new THREE.TextureLoader().load('public/cm.png');
-const cm = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: cmtexture }));
-cm.position.set(4.5, -2, 0);
+const cm = new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), new THREE.MeshBasicMaterial({ map: cmtexture }));
+cm.position.set(4.5, -3, 0);
 scene.add(cm);
 
+const edges = new THREE.EdgesGeometry(cm.geometry); // Create edges from the box geometry
+const edgeMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 10 }); // Border color and width
+const edgeLines = new THREE.LineSegments(edges, edgeMaterial); // Create line segments for edges
+
+// Adjust the position to match the box
+edgeLines.position.copy(cm.position); // Align edges with the box position
+
+scene.add(edgeLines);
+
 const litexture = new THREE.TextureLoader().load('public/linkedin.png');
-const li = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: litexture }));
-li.position.set(-1, -2, 2);
+const li = new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), new THREE.MeshBasicMaterial({ map: litexture }));
+li.position.set(-1, -3, 0);
 scene.add(li);
+
+const edgesli = new THREE.EdgesGeometry(li.geometry); // Create edges from the box geometry
+const edgeMaterialli = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 10 }); // Border color and width
+const edgeLinesli = new THREE.LineSegments(edgesli, edgeMaterialli); // Create line segments for edges
+
+// Adjust the position to match the box
+edgeLinesli.position.copy(li.position); 
+
+scene.add(edgeLinesli);
 
 // Raycaster and mouse variables
 const raycaster = new THREE.Raycaster();
@@ -151,6 +169,12 @@ function moveCamera() {
   cm.rotation.x += 0.01;
   cm.rotation.y += 0.01;
   cm.rotation.z += 0.01;
+  edgeLines.rotation.x += 0.01;
+  edgeLines.rotation.y += 0.01;
+  edgeLines.rotation.z += 0.01;
+  edgeLinesli.rotation.x += 0.01;
+  edgeLinesli.rotation.y += 0.01;
+  edgeLinesli.rotation.z += 0.01;
   li.rotation.x += 0.01;
   li.rotation.y += 0.01;
   li.rotation.z += 0.01;
@@ -158,7 +182,7 @@ function moveCamera() {
   extraMesh.rotation.x += 0.02;
   extraMesh.rotation.y += 0.025;
   extraMesh.rotation.z += 0.02;
-  const scrollChange = lastScrollTop - t;
+  const scrollChange = lastScrollTop - t;``
   extraMesh.position.x -= scrollChange*0.03;
   lastScrollTop = t;
 
@@ -176,6 +200,12 @@ function animate() {
   cm.rotation.x += 0.005;
   cm.rotation.y += 0.0075;
   cm.rotation.z += 0.005;
+  edgeLines.rotation.x += 0.005;
+  edgeLines.rotation.y += 0.0075;
+  edgeLines.rotation.z += 0.005;
+  edgeLinesli.rotation.x += 0.005;
+  edgeLinesli.rotation.y += 0.0075;
+  edgeLinesli.rotation.z += 0.005;
   li.rotation.x += 0.005;
   li.rotation.y += 0.0075;
   li.rotation.z += 0.005;
