@@ -1,40 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vedansh Mannem</title>
-    <nav>
-      <a id="#home">Home</a>
-    </nav>
-    <script type="module" crossorigin src="/bobross21346.github.io/assets/index-DVvclr9q.js"></script>
-    <link rel="stylesheet" crossorigin href="/bobross21346.github.io/assets/index-B4J8LbMQ.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="Vedansh Mannem builds software across machine learning, science, and education." />
+    <meta name="theme-color" content="#0b0d0c" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b0d0c'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23c8f560'/%3E%3C/svg%3E" />
+    <title>Vedansh Mannem — Researcher & Engineer</title>
+    <script type="module" crossorigin src="./assets/index-55mzzkNJ.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-Dezn_h7o.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-Dqv2dMHJ.css">
   </head>
   <body>
+    <div class="noise" aria-hidden="true"></div>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="mark" href="#top" aria-label="Vedansh Mannem, home">VM<span>°</span></a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#crunch-math">Crunch Math</a>
+      </div>
+      <a class="contact-link" href="mailto:mannem.vedansh@gmail.com">Email <span>↗</span></a>
+    </nav>
 
-    <canvas id="bg"></canvas>   
-
-    <main>
-
-      <header>
-        <h1 class="right">Vedansh Mannem</h1>
+    <main id="top">
+      <header class="hero">
+        <h1 class="sr-only">Vedansh Mannem</h1>
+        <div class="playground" id="playground">
+          <canvas id="playground-canvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero-bottom">
+          <p>Incoming CS + Physics student at Georgia Tech. Currently researching score-based generative models at Princeton LIPS.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View projects <span>↓</span></a>
+            <a class="button secondary" href="./Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé <span>↗</span></a>
+          </div>
+        </div>
       </header>
 
-      <section>
-        <h2>Experience</h2>
-        <p>
-          One of 6 Research Interns under Dr. Feng Chen @ The University of Texas at Dallas <br>
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="kicker">01 / Projects</p>
+          <h2>Selected work.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project project-featured">
+            <div class="project-top"><span>Scientific ML · Photonics</span><span>01</span></div>
+            <div>
+              <h3>GaN-SHG</h3>
+              <p>Optimization code and Lumerical simulations for second-harmonic generation in gallium nitride metasurfaces, using Bayesian optimization, reinforcement learning, and random forests.</p>
+            </div>
+            <a href="https://github.com/v1m08/GaN-SHG" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
+          </article>
 
-          Founder of <a href="https://www.crunchmath.org/" class="links">Crunch Math</a> - check out our <a href="https://www.youtube.com/@crunchmath" class="links">YouTube page</a> (and sub while you're at it) for cool math videos
-        </p>
+          <article class="project">
+            <div class="project-top"><span>Bioinformatics · ML</span><span>02</span></div>
+            <div>
+              <h3>Immune Resilience</h3>
+              <p>Open-source data extraction and machine-learning tooling for identifying microRNA candidates associated with immune resilience across GEO datasets.</p>
+            </div>
+            <a href="https://github.com/v1m08/IR-miRNA-biomarkers" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
+          </article>
+
+          <article class="project">
+            <div class="project-top"><span>API · Education</span><span>03</span></div>
+            <div>
+              <h3>QuestionGen</h3>
+              <p>An SAT question-generation API built around learned features, logic skeletons, graph nodes, and metadata extraction.</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/v1m08/questiongen" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+              <a href="https://questiongen-w97p.onrender.com/" target="_blank" rel="noreferrer">Live API <span>↗</span></a>
+            </div>
+          </article>
+        </div>
       </section>
-      <section class="light">
-        <h2>👩🏽‍🚀 Projects</h2>
-        <p>
-          Machine Learning Model for Psoriasis and Eczema
-        </p>
+
+      <section class="about" id="about">
+        <p class="kicker">02 / About</p>
+        <div>
+          <p class="about-copy">Incoming CS + Physics student at Georgia Tech.<br />Recent work includes generative modeling, computational photonics, bioinformatics, 3D perception, and full-stack product engineering.</p>
+          <a class="text-link" href="https://github.com/v1m08" target="_blank" rel="noreferrer">More on GitHub <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="venture" id="crunch-math">
+        <div class="venture-label"><span>Founded 2023</span><span>Education</span></div>
+        <div class="venture-grid">
+          <div>
+            <p class="kicker">Crunch Math</p>
+            <h2>Free and affordable math education.</h2>
+          </div>
+          <div class="venture-copy">
+            <p>I founded Crunch Math to run free online programs and low-cost tutoring for K–12 students. It is fiscally sponsored by Hack Club.</p>
+            <div class="inline-links">
+              <a class="text-link" href="https://www.crunchmath.org/" target="_blank" rel="noreferrer">Visit site <span>↗</span></a>
+              <a class="text-link" href="https://hcb.hackclub.com/crunch-math/transactions" target="_blank" rel="noreferrer">Public finances <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recognition" id="recognition">
+        <p class="kicker">03 / Recognition</p>
+        <a href="https://www.jkcf.org/our-stories/2026-college-scholarship-finalists/" target="_blank" rel="noreferrer">
+          <span class="recognition-year">2026</span>
+          <span><strong>Cooke College Scholar</strong><small>Jack Kent Cooke Foundation</small></span>
+          <span>↗</span>
+        </a>
+      </section>
+
+      <section class="contact">
+        <p class="kicker">Contact</p>
+        <h2>Get in touch.</h2>
+        <a href="mailto:mannem.vedansh@gmail.com">mannem.vedansh@gmail.com <span>↗</span></a>
       </section>
     </main>
+
+    <footer>
+      <div class="footer-top">
+        <a class="mark" href="#top">VM<span>°</span></a>
+        <div class="socials">
+          <a href="https://linkedin.com/in/vedansh-mannem-36732b282" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="https://github.com/v1m08" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="./Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Vedansh Mannem</p>
+        <a class="legacy-link" href="./legacy.html"><span class="legacy-icon">✦</span><span><strong>Enter the old universe</strong><small>The original Three.js portfolio</small></span><span>→</span></a>
+      </div>
+    </footer>
   </body>
 </html>
